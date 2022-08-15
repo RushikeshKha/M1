@@ -1,0 +1,111 @@
+useEffect Code
+
+
+  const [chartd, setChartd] = useState(data)
+  const [chartbnf, setChartbnf] = useState(data)
+  const [chartmco, setChartmco] = useState(data)
+  const [chartmbnfpo, setChartmbnfco] = useState(data)
+  const [chartnfmpe, setChartnfmpe] = useState(data)
+  const [chartbnfmpe, setChartbnfmpe] = useState(data)
+  
+    useEffect(() => {
+        fetch('http://192.168.0.103:4000/idxnifty').then(res => res.json().then((chartdata) => {setChartd({
+            labels:chartdata.time,
+            datasets:[{
+                label:"OI",
+                data:chartdata.oi,
+                backgroundColor: ["rgba(5, 106, 200, 1)"],
+                borderColor: ["rgba(6, 184, 56, 1)"],
+                borderWidth: 0,
+                borderRadius: 50,
+                barThickness: 10
+            }]
+          })}))
+
+          fetch('http://192.168.0.103:4000/idxbnifty').then(res => res.json().then((chartdata) => {setChartbnf({
+            labels:chartdata.time,
+            datasets:[{
+                label:"OI",
+                data:chartdata.oi,
+                backgroundColor: ["rgba(5, 106, 200, 1)"],
+                borderColor: ["rgba(6, 184, 56, 1)"],
+                borderWidth: 0,
+                borderRadius: 50,
+                barThickness: 10
+            }]
+          })
+          console.log(chartdata)
+        }))
+
+          
+          setTimeout(() => {
+            fetch('http://192.168.0.103:4000/nfceoi').then(res => res.json().then((chartdata) => {setChartmco({
+              labels:chartdata.strike,
+              datasets:[{
+                  label:"OI",
+                  data:chartdata.oi,
+                  backgroundColor: ["rgba(108, 181, 106, 1)"],
+                  borderColor: ["rgba(6, 184, 56, 1)"],
+                  borderWidth: 0,
+                  borderRadius: 50,
+                  barThickness: 10
+              }]
+              
+            })
+            console.log(chartdata)}
+            ))
+
+            fetch('http://192.168.0.103:4000/bnfceoi').then(res => res.json().then((chartdata) => {setChartmbnfco({
+              labels:chartdata.strike,
+              datasets:[{
+                  label:"OI",
+                  data:chartdata.oi,
+                  backgroundColor: ["rgba(108, 181, 106, 1)"],
+                  borderColor: ["rgba(6, 184, 56, 1)"],
+                  borderWidth: 0,
+                  borderRadius: 50,
+                  barThickness: 10
+              }]
+              
+            })
+            console.log(chartdata)}
+            ))
+            
+          }, 500);
+          setTimeout(() => {
+            fetch('http://192.168.0.103:4000/nfpeoi').then(res => res.json().then((chartdata) => {setChartnfmpe({
+              labels:chartdata.strike,
+              datasets:[{
+                  label:"OI",
+                  data:chartdata.oi,
+                  backgroundColor: ["rgba(220, 112, 112, 1)"],
+                  borderColor: ["rgba(6, 184, 56, 1)"],
+                  borderWidth: 0,
+                  borderRadius: 50,
+                  barThickness: 10
+              }]
+              
+            })
+            console.log(chartdata)}
+            ))
+
+            fetch('http://192.168.0.103:4000/bnfpeoi').then(res => res.json().then((chartdata) => {setChartbnfmpe({
+              labels:chartdata.strike,
+              datasets:[{
+                  label:"OI",
+                  data:chartdata.oi,
+                  backgroundColor: ["rgba(220, 112, 112, 1)"],
+                  borderColor: ["rgba(6, 184, 56, 1)"],
+                  borderWidth: 0,
+                  borderRadius: 50,
+                  barThickness: 10
+              }]
+              
+            })
+            console.log(chartdata)}
+            ))
+          }, 1000);
+          
+      }, [])
+
+      <Dashboard chartdata={chartd} chartbnf={chartbnf} chartmco={chartmco} chartbnfco={chartmbnfpo} chartnfmpe={chartnfmpe} chartbnfmpe={chartbnfmpe}/>

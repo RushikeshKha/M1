@@ -1,0 +1,130 @@
+body {
+    background: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.sa-heading {
+
+    height: 23px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+    margin-top: 50px;
+}
+
+.rnd-btn {
+    width: 60px;
+    text-align: center;
+    border-radius: 12px;
+    height: 30px;
+    margin-left: 5px;
+    background: #D9D9D9;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.topper {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.second-topper {
+    display: flex;
+    width: 765px;
+    overflow: auto;
+}
+
+.timeframe {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.indices select {
+    width: 150px;
+    height: 35px;
+
+    background: #D9D9D9;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+    font-size: large;
+}
+
+.timeframe .rnd-btn{
+    margin-left: 20px;
+    
+}
+.rnd-btn{
+    border: none;
+    margin-bottom: 10px;
+}
+
+.rnd-btn-active{
+    box-shadow: none;
+    width: 60px;
+    text-align: center;
+    border-radius: 12px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #a39e9e;
+    border:none
+}
+
+.absolute{
+    width: 765px;
+    height: 250px;
+}
+
+@media only screen and (max-width: 700px){
+    
+    .chartOI{
+        width: 450px;
+        margin-left: 60px;
+    }
+    .sa-options{
+        width: 500px;
+    }
+    .second-topper{
+        width: 500px;
+        margin-left: 60px;
+    }
+    .topper{
+        display: flex;
+        flex-direction: column;
+    }
+    .indices{
+        margin-left: -210px;
+    }
+    .timeframe{
+        margin-left: 50px;
+    }
+    .absolute{
+        margin-left: 60px;
+        width: 450px;
+    }
+    .divide{
+        margin-left: 120px;
+    }
+    .sa-heading{
+        margin-left: 100px;
+    }
+}

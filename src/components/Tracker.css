@@ -1,0 +1,92 @@
+#b1 {
+    color: white;
+    background-color: #F14C4C;
+}
+
+#b2 {
+    color: white;
+    background-color: #06B838;
+}
+
+#b3 {
+    color: white;
+    background-color: #06B838;
+}
+
+#b4 {
+    color: white;
+    background-color: #F14C4C;
+}
+
+.topper-tracker{
+    display: flex;
+}
+
+.btn-holder-one{
+    display: flex;
+}
+
+.ty{
+    display: flex;
+    margin-top: 10px;
+}
+
+.ty .rnd-btn{
+    width: 100px;
+}
+
+.btn-holder-label{
+    margin: 10px;
+    font-size: medium;
+}
+
+.tablee{
+    margin-top: 20px;
+    height: 500px;
+    width: 750;
+    overflow: scroll;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.indices{
+    margin-top: 10px;
+    display: flex;
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    .indices button{
+        margin-top: 20px;
+    }
+    .topper{
+        margin-left: 240px;
+    }
+    .second-topper{
+        margin-left: 10px;
+    }
+    .tablee{
+        margin-left: 10px;
+    }
+    .divide{
+        width: 100%;
+        margin: 0;
+    }
+}
