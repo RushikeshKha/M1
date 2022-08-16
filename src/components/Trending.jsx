@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import OIChart from './OIChart'
 import './Trending.css'
 function Trending() {
 
-    const [chartdata, setChartdata] = useState({
+    const chartdata = {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [
             {
@@ -23,7 +23,7 @@ function Trending() {
                 tension: 0.5
             }
         ]
-    })
+    }
   return (
     <div className='chart'>
         <OIChart chartdata={chartdata}/>
