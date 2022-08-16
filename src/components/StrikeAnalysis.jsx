@@ -52,7 +52,7 @@ function StrikeAnalysis() {
     })
     useEffect(() => {
         if(ticker === "Select") return;
-        fetch(`http://192.168.0.103:4000/loadstrikes/${ticker}`).then(res => res.json().then((data) => { setStrikes(data) }))
+        fetch(`http://20.219.2.172:4000/loadstrikes/${ticker}`).then(res => res.json().then((data) => { setStrikes(data) }))
     }, [ticker])
 
 
@@ -96,7 +96,7 @@ function StrikeAnalysis() {
                                 PE
                             </button>
                             <button className="rnd-btn" onClick={() => {
-                                fetch(`http://192.168.0.103:4000/strikeanalysis/${ticker}`, {
+                                fetch(`http://20.219.2.172:4000/strikeanalysis/${ticker}`, {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json'

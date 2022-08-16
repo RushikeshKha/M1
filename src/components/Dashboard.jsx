@@ -394,7 +394,7 @@ const [banknifty_most_pe, setBankNifty_most_pe] = useState({
 })
 
 useEffect(() => {
-  fetch('http://192.168.0.103:4000/idxnifty').then(res => res.json().then((chartdata) => {setNifty_options({
+  fetch('http://20.219.2.172:4000/idxnifty').then(res => res.json().then((chartdata) => {setNifty_options({
       labels:chartdata.time,
       datasets:[{
           label:"OI",
@@ -407,7 +407,7 @@ useEffect(() => {
       }]
     })}))
 
-    fetch('http://192.168.0.103:4000/idxbnifty').then(res => res.json().then((chartdata) => {setBankNifty_options({
+    fetch('http://20.219.2.172:4000/idxbnifty').then(res => res.json().then((chartdata) => {setBankNifty_options({
       labels:chartdata.time,
       datasets:[{
           label:"OI",
@@ -423,7 +423,7 @@ useEffect(() => {
 
     
     setTimeout(() => {
-      fetch('http://192.168.0.103:4000/nfceoi').then(res => res.json().then((chartdata) => {setNifty_most_ce({
+      fetch('http://20.219.2.172:4000/nfceoi').then(res => res.json().then((chartdata) => {setNifty_most_ce({
         labels:chartdata.strike,
         datasets:[{
             label:"OI",
@@ -438,7 +438,7 @@ useEffect(() => {
       })}
       ))
 
-      fetch('http://192.168.0.103:4000/bnfceoi').then(res => res.json().then((chartdata) => {setBankNifty_most_ce({
+      fetch('http://20.219.2.172:4000/bnfceoi').then(res => res.json().then((chartdata) => {setBankNifty_most_ce({
         labels:chartdata.strike,
         datasets:[{
             label:"OI",
@@ -456,7 +456,7 @@ useEffect(() => {
       
     }, 500);
     setTimeout(() => {
-      fetch('http://192.168.0.103:4000/nfpeoi').then(res => res.json().then((chartdata) => {setNifty_most_pe({
+      fetch('http://20.219.2.172:4000/nfpeoi').then(res => res.json().then((chartdata) => {setNifty_most_pe({
         labels:chartdata.strike,
         datasets:[{
             label:"OI",
@@ -472,7 +472,7 @@ useEffect(() => {
       }
       ))
 
-      fetch('http://192.168.0.103:4000/bnfpeoi').then(res => res.json().then((chartdata) => {setBankNifty_most_pe({
+      fetch('http://20.219.2.172:4000/bnfpeoi').then(res => res.json().then((chartdata) => {setBankNifty_most_pe({
         labels:chartdata.strike,
         datasets:[{
             label:"OI",
